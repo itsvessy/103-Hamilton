@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Vessy Home</title>
+<meta name="description" content="Data access, use, storage, retention, and revocation for the Vessy Home Nest integration.">
+<link rel="canonical" href="https://itsvessy.github.io/privacy.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2310294d%22/%3E%3Cpath%20d%3D%22M8%2010l8%2013%208-13%22%20fill%3D%22none%22%20stroke%3D%22%2382bdff%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E">
+<style>
+:root { color-scheme: light; --ink:#17263d; --muted:#526176; --blue:#1553ae; --line:#d9e2ed; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:#f2f6fc; font:1.0625rem/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+a { color:var(--blue); text-underline-offset:.2em; overflow-wrap:anywhere; }
+a:hover { text-decoration-thickness:2px; }
+a:focus-visible { outline:3px solid #2563eb; outline-offset:5px; border-radius:2px; }
+header { background:#10294d; color:white; border-top:5px solid #3f92f3; }
+.bar { max-width:54rem; margin:auto; padding:1.25rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+.brand { color:white; font-size:1.125rem; font-weight:700; text-decoration:none; }
+nav { display:flex; gap:1.3rem; font-size:1rem; }
+nav a { color:#e3edff; }
+nav a[aria-current="page"] { color:white; text-decoration-thickness:2px; font-weight:650; }
+main { max-width:50rem; margin:3rem auto; padding:2.5rem 3rem; background:white; border:1px solid var(--line); border-radius:10px; }
+.kicker { font-size:.875rem; color:var(--muted); font-weight:650; letter-spacing:.06em; text-transform:uppercase; margin:0 0 .4rem; }
+h1 { font-size:clamp(2rem,5vw,2.8rem); line-height:1.15; letter-spacing:-.035em; margin:0 0 1.2rem; }
+h2 { font-size:1.25rem; line-height:1.35; margin:2rem 0 .5rem; }
+p { margin:.75rem 0; }
+ul { padding-left:1.35rem; }
+li { margin:.5rem 0; }
+.intro { font-size:1.1875rem; }
+footer { max-width:50rem; margin:0 auto 3rem; padding:0 1.5rem; font-size:.9375rem; color:var(--muted); }
+.note { border-left:3px solid #3f92f3; padding:.25rem 0 .25rem 1rem; margin:1.6rem 0; }
+@media (max-width:600px) { .bar { padding:1rem 1.25rem; } main { margin:1rem; padding:1.6rem 1.25rem; } footer { margin:1.5rem .5rem 2rem; } }
+</style>
+</head>
+<body>
+<header><div class="bar"><a class="brand" href="./">Vessy Home</a><nav aria-label="Main navigation"><a href="./">Home</a><a href="privacy.html" aria-current="page">Privacy</a></nav></div></header>
+<main>
+<p class="kicker">Vessy Home</p>
+<h1>Privacy policy</h1>
+<p>Last updated: September 21, 2026</p>
+<p>This policy describes the personal Google Nest integration operated by <a href="https://github.com/itsvessy">itsvessy</a> through Home Assistant. It is intended for the operator and authorized household users.</p>
+<h2>Information accessed</h2>
+<ul>
+<li>Identifiers and names of authorized homes, rooms, and supported Nest devices.</li>
+<li>Available thermostat readings and settings, such as temperature, humidity, target temperatures, operating mode, and heating or cooling status.</li>
+<li>Device-change events received through Google Cloud Pub/Sub, and the topic and subscription information needed to receive those events.</li>
+<li>OAuth authorization tokens used to maintain the connection to Google. Google account passwords are entered on Google's pages and are not provided to this integration.</li>
+</ul>
+<h2>How information is used</h2>
+<p>Information is used to display device status, show device history, perform thermostat commands requested by household users, and run automations they configure. Pub/Sub access is used to set up and manage the event topics and subscriptions required by this integration.</p>
+<p>Google user data is not sold, used for advertising, or used to train generalized artificial intelligence models.</p>
+<h2>Storage and access</h2>
+<p>Configuration, authorization tokens, and recorded device information are stored in the operator's Home Assistant installation. Backups can contain the same information and are stored in locations chosen by the operator. Access to the installation and its backups is managed by the operator.</p>
+<h2>Service providers and sharing</h2>
+<p>Google processes device requests and delivers events through its Nest and Google Cloud services. Tailscale provides remote connectivity to the private installation. Backup providers, if configured, process the backups stored with them. Information is made available to authorized household users and providers needed to operate these features.</p>
+<p>This public information site is hosted by GitHub Pages. It contains no Nest device data, uses no analytics scripts, and sets no application cookies. GitHub may process website access logs under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>.</p>
+<h2>Retention and deletion</h2>
+<p>Device history and backups are retained according to the operator's Home Assistant and backup settings. Authorization tokens are retained while the connection is configured. Revoking access stops future authorized access but does not automatically erase previously recorded history or existing backups.</p>
+<p>To disconnect, revoke the integration's device permissions in Google's <a href="https://nestservices.google.com/partnerconnections">Partner Connections Manager</a> and remove the Google Nest integration from Home Assistant. The operator can separately delete stored history and backups when they are no longer needed.</p>
+<h2>Google API data use</h2>
+<p>Vessy Home's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+<h2>Contact and changes</h2>
+<p>For questions or deletion requests, contact the operator using the support email shown on the Google authorization screen. This policy will be updated if the integration's data practices change.</p>
+<p><a href="./">Return to the homepage</a></p>
+</main>
+<footer>Maintained by <a href="https://github.com/itsvessy">itsvessy</a> for personal household use.</footer>
+</body>
+</html>
